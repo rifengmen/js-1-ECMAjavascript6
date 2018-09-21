@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>平方计算器</title>
+		<script>
+			function acl() {
+				var input = document.getElementById('num');
+			    var span = document.getElementById('result');
+			    var n = input.value;
+		    	if (n == "" || isNaN(n)) {
+				    span.innerHTML = "对不起，请输入数字！";
+			    }else {
+				    span.innerHTML = n*n;
+			    }
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		
+		<input type="text" id="num"/>
+		<button type="button" onclick="acl()";>平方</button>
+		=
+		<span style="display: inline-block; width: 50px; height: 26px; border: 2px #000 solid;"  id="result"></span>
+		
+	</body>
+</html>

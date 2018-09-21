@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>猜数字</title>
+		<script>
+			//生成一个随机数，由于该变量处于函数外部，因此是全局变量，该代码是在页面加载时执行的。
+			var initNum = parseInt(Math.random()*100)+1;
+			function guess() {
+				//获取文本框
+				var input = document.getElementById("num");
+				//获取段落
+				var p = document.getElementById("result");
+				//获取文本框的值
+				var n = input.value;
+				if(n == "" || isNaN(n)) {
+					//输入为空或者不是数字给予提示
+					p.innerHTML = "请输入1-100之间的整数！";
+				}else {
+					if(n < initNum) {
+						p.innerHTML = "小了！";
+					}else if(n > initNum) {
+						p.innerHTML = "大了！";
+					}else {
+						p.innerHTML = "对了！";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		
+		<input type="text"  id="num"/>
+		<button type="button" onclick = "guess();">猜</button>
+		<p id="result"></p>
+		
+	</body>
+</html>

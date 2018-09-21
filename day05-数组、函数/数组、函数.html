@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>day05</title>
+		
+		<script type="text/javascript">
+			
+//			//函数正三角形
+//			sj(30)
+//			function sj(n) {
+//				for (var i=1;i<n;i++) {
+//				    for (var i2=1;i2<n-i;i2++) {
+//					    document.write('☺');
+//				    }
+//				    for (var i1=1;i1<=i*2-1;i1++) {
+//				    	document.write('❤');
+//			    	}
+//				    document.write('<br>');
+//			    }
+//			    document.write('<br>');
+//			}
+			
+//			//参数
+//			fn(1,2,3,4,5,6)
+//			function fn(a,b) {
+//				arguments;
+//				document.write(a,b);
+//			}
+			
+			
+			
+//			//给任意一个数组，在最后面添加一个或多个数组元素
+//			var arr = ['a','b','c','d'];
+//			push(arr,1,2,3);
+//			function push(arr) {
+//				for (var i=1;i<arguments.length;i++) {
+//					arr.push(arguments[i]);
+//				}
+//				document.write(arr);
+//			}
+//			document.write('<br>');
+			
+			
+//			//给数组进行排序
+//			var arr = [10,5,8,12,19,3,7,41,82];
+//			sort(arr);
+//			function sort(arr) {
+//				for (var i=0;i<arr.length;i++) {
+//					//arr[i];
+//					for (var j=i+1;j<arr.length;j++) {
+//						if(arr[i] > arr[j]) {
+//							var temp = arr[i];
+//							arr[i] = arr[j];
+//							arr[j] = temp;
+//						}
+//					}
+//				}
+//			}
+//			document.write(arr,'<br>');
+			
+			
+			
+//			//判断某一个数是奇数还是偶数
+//			odd(10);
+//			function odd(number) {
+//				var flag = number % 2 == 0 ? false : true;
+//				document.write(flag,'<br>');
+//			}
+			
+			
+//			//验证某个数组的某个元素是否存在
+//			var arr=[1,2,3,4,5,6,7,8,9];
+//			isExist(arr,5);
+//			function isExist(arr,element) {
+//				if(arguments.length != 2 || typeof arr != "object") {
+//					return;
+//				}
+//				for (var i=0;i<arr.length;i++) {
+//					if(arr[i] === element) {
+//						return true;
+//					}
+//				}
+//				return false;
+//			}
+//			document.write(isExist(arr,5)); 
+			
+			
+			//函数中套用函数
+			var arr = [10,5,8,12,19,3,7,41,82];
+			var newarr = sort(arr,'>');
+			document.write(newarr);
+			function sort(arr,type) {
+				if(type == '>') {
+					return sortdown(arr);
+				} else if(type == '<') {
+					return sortup(arr);
+				}
+			}
+			
+			function sortup(arr) {
+				for (var i=0;i<arr.length;i++) {
+					for (var j=i+1;j<arr.length;j++) {
+						if(arr[i] > arr[j]) {
+							var temp = arr[i];
+							arr[i] = arr[j];
+							arr[j] = temp;
+						}
+					}
+				}
+				return arr;
+			}
+			
+			
+			function sortdown(arr) {
+				for (var i=0;i<arr.length;i++) {
+					for (var j=i+1;j<arr.length;j++) {
+						if(arr[i] < arr[j]) {
+							var temp = arr[i];
+							arr[i] = arr[j];
+							arr[j] = temp;
+						}
+					}
+				}
+				return arr;
+			}
+			
+			
+			
+			
+			
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		
+		
+	</body>
+</html>

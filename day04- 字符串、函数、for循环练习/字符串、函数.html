@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串、函数</title>
+		
+		<script>
+			
+			//字符串拼接table表格
+			var str = "<table cellspacing='0' cellpadding='10' align='center' border='1'>"
+			for (i=0;i<10;i++) {
+				str+="<tr>";
+				for (j=0;j<10;j++) {
+					str+="<td>";
+					str+=i;
+					str+="---";
+					str+=j;
+					str+="</td>";
+				}
+				str+="</tr>";
+			}
+			str+="</table>";
+			document.write(str);
+			
+			
+			//给数组内添加元素
+			var arr = [];
+			arr[0] = 1;
+			arr[5] = 10;
+			document.write(arr);
+			document.write('<br>');
+			
+			
+			//数组内去空
+			var arr=[10,20,,30,40,50,,60,70];
+			var newarr=[];
+			for(var i=0;i<arr.length;i++) {
+				if(arr[i] != undefined) {
+					newarr.push(arr[i]);
+				}
+			}
+			document.write(newarr);
+			document.write('<br>');
+			
+			
+			
+			
+			
+			
+			//取奇数或者偶数
+			for(var i=0;i<10;i++) {
+				if(i%2 == 1) {
+					continue;//遇到奇数跳过当前所在循环的本次循环继续下一次
+				}
+				document.write(i);
+			}
+			document.write('<br>');
+			
+			
+			//寻找数组里是否有‘c’
+			var arr = ['a','b','c','d','e'];
+			var flag = false;
+			for (var i=0;i<arr.length;i++) {
+				if(arr[i] == 'c') {
+					flag = true;
+					break;//遇到所要寻找的词后直接终止当前它所在的循环
+				}
+			}
+			document.write(flag);
+			document.write('<br>');
+			
+			
+			//函数
+			//函数封装
+			function table() {
+				var str = "<table cellspacing='0' cellpadding='10' align='center' border='1'>"
+			for (i=0;i<10;i++) {
+				str+="<tr>";
+				for (j=0;j<10;j++) {
+					str+="<td>";
+					str+=i;
+					str+="---";
+					str+=j;
+					str+="</td>";
+				}
+				str+="</tr>";
+			}
+			str+="</table>";
+			}
+			
+			
+			//调用函数
+			table();
+			function table() {
+				var str = "<table cellspacing='0' cellpadding='10' align='center' border='1'>"
+			for (i=0;i<10;i++) {
+				str+="<tr>";
+				for (j=0;j<10;j++) {
+					str+="<td>";
+					str+=i;
+					str+="---";
+					str+=j;
+					str+="</td>";
+				}
+				str+="</tr>";
+			}
+			str+="</table>";
+			}
+			document.write(table());
+			
+			
+			//参数设定（即将常用修改元素设为一个变量）
+			f0(10,20);
+			function f0(row,col) {
+				var str = "<table cellspacing='0' cellpadding='10' align='center' border='1'>"
+			for (i=0;i<row;i++) {
+				str+="<tr>";
+				for (j=0;j<col;j++) {
+					str+="<td>";
+					str+=i;
+					str+="---";
+					str+=j;
+					str+="</td>";
+				}
+				str+="</tr>";
+			}
+			str+="</table>";
+			}
+			document.write(f0());
+			
+			
+			function f0() {
+				alert("hello!");
+			}
+			f0();
+			
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>if语句、for循环</title>
+		<script>
+			
+			//if语句多条分支结构练习
+			var num = 80;
+		    if(num>=90 && num<=100) {
+		    	document.write('A+');
+	    	} else if(num>=80 && num<90) {
+	    		document.write('A');
+	    	} else if(num>=60 && num<80) {
+	    		document.write('A-');
+	    	} else if(num>=0 && num<60) {
+		    	if(num>=50) {
+		    		document.write('B+');
+		    	} else if(num>=35) {
+			    	document.write('B');
+			    } else if(num>=0) {
+			    	document.write('B-');
+			    }
+		    }
+	    	document.write('<br>');
+	    	
+	    	
+	    	//switch语句多条分支结构练习
+	    	var day = 7;
+	    	switch(day) {
+	    		case 0:
+	    		                document.write('星期日');
+	    		                break;
+	    		case 1:
+	    		                document.write('星期一');
+	    		                break;
+	    		case 2:
+	    		                document.write('星期二');
+	    		                break;
+	    		case 3:
+	    		                document.write('星期三');
+	    		                break;
+	    		case 4:
+	    		                document.write('星期四');
+	    		                break;
+	    		case 5:
+	    		                document.write('星期五');
+	    		                break;
+	    		case 6:
+	    		                document.write('星期六');
+	    		                break;
+	    		default:
+	    		              document.write('请输入正确数字!')
+	    	}
+	    	document.write('<br>');
+	    	
+	    	
+	    	//for循环结构练习
+	    	//'*'循环11次
+	    	for (var i=0;i<11;i++) {
+	    		document.write('*');
+	    	}
+	    	document.write('<br>');
+	    	
+	    	//0-10求和
+	    	var sum = 0;
+	    	for (var i=0;i<11;i++) {
+	    		sum+=i;
+	    	}
+	    	document.write(sum);
+	    	document.write('<br>');
+	    	
+	    	
+	    	//10行5列隔列变色表格制作
+	    	document.write('<table>');
+	    	for (var i=1;i<6;i++) {
+	    		document.write('<tr>');
+	    		for (var j=1;j<11;j++) {
+	    			var color =j%2 ==0 ?"red":"yellow";
+	    			document.write('<td bgcolor='+color+'>'+'123'+'</td>');
+	    		}
+	    		document.write('</tr>');
+	    	}
+	    	document.write('</table>');
+	    	document.write('<br>');
+	    	
+	    	
+	    	//99乘法表隔行变色
+	    	document.write('<table>');
+	    	for (var i=1;i<10;i++) {
+	    		var color = i%2 ==1?"blue":"green";
+	    		document.write('<tr bgcolor='+color+'>');
+	    		for (var j=1;j<=i;j++) {
+	    			document.write('<td>'+j+'*'+i+'='+i*j+'</td>');
+	    		}
+	    		document.write('</tr>');
+	    	}
+	    	document.write('</table>');
+	    	document.write('<br>');
+	    	
+	    	
+	    	//n行星号正三角形
+	    	var n = 6;
+	    	for (var i=1;i<=n;i++) {
+	    		for (var i2=1;i2<=n-i;i2++) {
+	    				document.write('&nbsp;');
+	    		}
+	    		for (var i1=1;i1<=i*2-1;i1++) {
+	    			document.write('*');
+	    		}
+	    		document.write('<br>');
+	    	}
+	    	document.write('<br>');
+	    	
+	    	
+	    	//n行星号倒三角形
+	    	var n = 5;
+	    	for (var j=1;j<=n;j++) {
+	    		for (var j1=1;j1<j;j1++) {
+	    			document.write('&nbsp;');
+	    		}
+	    		for (var j2=2*n-1;j2>=j*2-1;j2--) {
+	    			document.write('*');
+	    		}
+	    		document.write('<br>');
+	    	}
+	    	document.write('<br>');
+	    	
+	    	
+	    	//星号菱形
+	    	var n = 6;
+	    	for (var i=1;i<=n;i++) {
+	    		for (var i2=1;i2<=n-i;i2++) {
+	    				document.write('&nbsp;');
+	    		}
+	    		for (var i1=1;i1<=i*2-1;i1++) {
+	    			document.write('*');
+	    		}
+	    		document.write('<br>');
+	    	}
+	    	var m = 5;
+	    	for (var j=1;j<=m;j++) {
+	    		for (var j1=0;j1<j;j1++) {
+	    			document.write('&nbsp;');
+	    		}
+	    		for (var j2=2*m-1;j2>=j*2-1;j2--) {
+	    			document.write('*');
+	    		}
+	    		document.write('<br>');
+	    	}
+	    	
+	    	
+	    	//斐波那契数列（0-100）
+	    	var a = 1;
+	    	var b = 1;
+	    	var c = 0;
+	    	for (var i=1;i<100;i++) {
+	    		if(i == 1) {
+	    			document.write(a);
+	    			document.write('<br>');
+	    		} else if(i == 2) {
+	    			document.write(b);
+	    			document.write('<br>');
+	    		} else if(a+b<100) {
+	    			document.write(a+b);
+	    			c = b;
+	    			b = a+b;
+	    			a = c;
+	    			document.write('<br>');
+	    		}
+	    	}
+	    	document.write('<br>');
+	    	
+	    	
+	    	//输出数组
+	    	var arr = [5,10,15,20,25,30,35,40];
+	    	document.write(arr);
+	    	document.write('<br>');
+	    	
+	    	
+	    	//输出数组第二位
+	    	var arr = [5,10,15,20,25,30,35,40];
+	    	document.write(arr[1]);
+	    	document.write('<br>');
+	    	
+	    	
+	    	//输出数组长度
+	    	var arr = [5,10,15,20,25,30,35,40];
+	    	document.write(arr.length);
+	    	document.write('<br>');
+	    	
+	    	
+	    	//输出数组最后一位
+	    	var arr = [5,10,15,20,25,30,35,40];
+	    	document.write(arr[arr.length-1]);
+	    	document.write('<br>');
+	    	
+	    	
+	    	//数组求和
+	    	var arr = [5,10,15,20,25,30,35,40];
+	    	sum = 0;
+	    	for(var i=0;i<arr.length;i++) {
+	    		sum+=arr[i];
+	    	}
+	    	document.write(sum);
+	    	document.write('<br>');
+	    	
+	    	
+	    	//输出数组中最大的数字
+	    	var arr = [5,10,15,20,25,30,35,40,2,8,7,100,150,64];
+	    	var sum = 0;
+	    	for(var i=0;i<arr.length;i++) {
+	    		if(sum < arr[i]) {
+	    			sum = arr[i];
+	    		}
+	    	}
+	    	document.write(sum);
+	    	document.write('<br>');
+	    	
+		
+		
+		
+		
+		
+		
+		</script>
+		
+		
+	</head>
+	<body>
+		
+		
+		
+	</body>
+</html>
